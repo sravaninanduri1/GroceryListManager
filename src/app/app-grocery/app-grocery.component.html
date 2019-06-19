@@ -1,0 +1,24 @@
+<div>
+<mat-card> 
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <div class="group">
+                        <mat-form-field appearance="outline">
+                            <mat-label>enter grocery items</mat-label>
+                    <input matInput placeholder="enter grocery items" [(ngModel)]="task" />
+                </mat-form-field>
+                    <button mat-raised-button color="primary" (click)="onClick()">ok</button>
+                </div>
+            </div>
+        </div>
+</mat-card>
+<br />
+        <mat-card-content>
+        <ul class="list-group">
+            <li *ngFor="let task of tasks" class="list-group-item">
+                <span> {{ task.name }} </span>
+            </li>
+        </ul>
+    </mat-card-content>
+    
+    </div>
